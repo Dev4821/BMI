@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bmi_screen.dart';
+import 'package:flutter_application_1/splash.dart';
 
 void main() {
-  runApp(MaterialApp(
-    title: "Awesome App",
-    home: HomePage(),
-  ));
+  runApp(MyApp());
 }
 
-class HomePage extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Awsome App"),
-      ),
-      body: Container(
-        child: Center(child: Text("Hi Flutter")),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Splash(),
     );
   }
 }
