@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bmi_Tips.dart';
+import 'package:flutter_application_1/bmi_screen.dart';
 
 class BMIResultScreen extends StatelessWidget {
   final bool isMale;
@@ -210,6 +212,38 @@ class BMIResultScreen extends StatelessWidget {
                       offset: Offset(4, 4),
                     )
                   ]),
+            ),
+            Container(
+              width: double.infinity,
+              height: 75.0,
+              color: Color.fromARGB(215, 229, 84, 32),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BMI_tips(
+                          resu: result,
+                        ),
+                      ));
+                },
+                child: Column(
+                  children: [
+                    const Text(
+                      "TIPS:",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25.0,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.tips_and_updates_rounded,
+                      size: 40.0,
+                      color: Colors.white,
+                    )
+                  ],
+                ),
+              ),
             ),
           ],
         ),

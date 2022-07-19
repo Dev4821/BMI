@@ -345,7 +345,7 @@ class _BMI_ScreenState extends State<BMI_Screen> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
